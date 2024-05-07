@@ -23,7 +23,7 @@ const container = createContainer();
 container.register([
   {
     key: UserRepository.name,
-    class: UserRepositoryPostgres,
+    Class: UserRepositoryPostgres,
     parameter: {
       dependencies: [
         {
@@ -37,7 +37,7 @@ container.register([
   },
   {
     key: PasswordHash.name,
-    class: BcryptPasswordHash,
+    Class: BcryptPasswordHash,
     parameter: {
       dependencies: [
         {
@@ -52,9 +52,9 @@ container.register([
 container.register([
   {
     key: AddUserUseCase.name,
-    class: AddUserUseCase,
+    Class: AddUserUseCase,
     parameter: {
-      injectTypeL: 'destructuring',
+      injectType: 'destructuring',
       dependencies: [
         {
           name: 'userRepository',
@@ -64,3 +64,5 @@ container.register([
     },
   },
 ]);
+
+module.exports = container;
