@@ -60,6 +60,10 @@ container.register([
           name: 'userRepository',
           internal: UserRepository.name,
         },
+        {
+          name: 'passwordHash',
+          internal: PasswordHash.name,
+        },
       ],
     },
   },
